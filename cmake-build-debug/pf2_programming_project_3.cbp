@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/benworthington/Documents/UArk Spring 2021/Programming Foundations 2 (CSCE 2014)/Projects/pf2-programming-project-3/Dictionary.cpp">
+			<Option target="pf2_programming_project_3"/>
+		</Unit>
+		<Unit filename="/Users/benworthington/Documents/UArk Spring 2021/Programming Foundations 2 (CSCE 2014)/Projects/pf2-programming-project-3/Dictionary.h">
+			<Option target="pf2_programming_project_3"/>
+		</Unit>
 		<Unit filename="/Users/benworthington/Documents/UArk Spring 2021/Programming Foundations 2 (CSCE 2014)/Projects/pf2-programming-project-3/main.cpp">
 			<Option target="pf2_programming_project_3"/>
 		</Unit>
