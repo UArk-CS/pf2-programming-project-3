@@ -18,7 +18,8 @@ public:
     ~Dictionary();
 
     void ReadFile(string name_);
-    bool Lookup(string searchParam_);
+    int BinarySearch(string &value_, int low_, int high_);
+    int Lookup(string value_);
 
 private:
     int count;

@@ -4,21 +4,18 @@
 
 #include "Dictionary.h"
 
-Dictionary::Dictionary()
-{
+Dictionary::Dictionary() {
     // Initialize word array
     count = 0;
     for (int i = 0; i < NUM_OF_WORDS; i++)
         word[i] = "";
 }
 
-Dictionary::~Dictionary()
-{
+Dictionary::~Dictionary() {
 }
 
 
-void Dictionary::ReadFile(string name_)
-{
+void Dictionary::ReadFile(string name_) {
     // Open input file
     ifstream din;
     din.open(name_.c_str());
@@ -38,12 +35,27 @@ void Dictionary::ReadFile(string name_)
     din.close();
 }
 
-bool Dictionary::Lookup(string searchParam_)
-{
-    // Search word array for string
-    bool found = false;
-    for (int i = 0; i < count; i++)
-        if (word[i] == searchParam_)
-            found = true;
-    return found;
+int Dictionary::BinarySearch(string &value_, int low_, int high_) {
+
+    // Calculate midpoint index
+    int midpoint = (low_ + high_) / 2;
+
+    if (low_ > high_) {
+        return -1;
+    } else if (word[midpoint] == value_) {
+        return midpoint;
+    } else if (word[midpoint] > value_) {
+        return BinarySearch(value_, low_, midpoint - 1);
+    } else {
+        BinarySearch(value_, midpoint + 1, high_);
+    }
+
+    return midpoint;
+
+}
+
+int Dictionary::Lookup(string value_) {
+
+    return BinarySearch(value_, 0, count - 1);
+
 }
