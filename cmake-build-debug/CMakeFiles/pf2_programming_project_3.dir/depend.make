@@ -4,5 +4,6 @@
 CMakeFiles/pf2_programming_project_3.dir/Dictionary.cpp.o: ../Dictionary.cpp
 CMakeFiles/pf2_programming_project_3.dir/Dictionary.cpp.o: ../Dictionary.h
 
+CMakeFiles/pf2_programming_project_3.dir/main.cpp.o: ../Dictionary.h
 CMakeFiles/pf2_programming_project_3.dir/main.cpp.o: ../main.cpp
 

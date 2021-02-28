@@ -1,6 +1,10 @@
 #include <iostream>
+#include "Dictionary.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+
+    Dictionary::Test();
+
     return 0;
+
 }

@@ -3,6 +3,9 @@
 //
 
 #include "Dictionary.h"
+#include <iostream>
+#include <algorithm>
+using namespace std;
 
 Dictionary::Dictionary() {
     // Initialize word array
@@ -47,15 +50,30 @@ int Dictionary::BinarySearch(string &value_, int low_, int high_) {
     } else if (word[midpoint] > value_) {
         return BinarySearch(value_, low_, midpoint - 1);
     } else {
-        BinarySearch(value_, midpoint + 1, high_);
+        return BinarySearch(value_, midpoint + 1, high_);
     }
 
-    return midpoint;
+//    return midpoint;
 
 }
 
 int Dictionary::Lookup(string value_) {
 
     return BinarySearch(value_, 0, count - 1);
+
+}
+
+void Dictionary::Test() {
+
+    Dictionary test;
+    string word;
+
+    test.ReadFile("top1000.txt");
+
+    cout << "Enter a word: > ";
+    cin >> word;
+    transform(word.begin(), word.end(), word.begin(), ::tolower);
+
+    cout << "Location in Dictionary: " << test.Lookup(word) << endl;
 
 }

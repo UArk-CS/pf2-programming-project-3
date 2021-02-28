@@ -21,6 +21,8 @@ public:
     int BinarySearch(string &value_, int low_, int high_);
     int Lookup(string value_);
 
+    static void Test();
+
 private:
     int count;
     string word[NUM_OF_WORDS];
