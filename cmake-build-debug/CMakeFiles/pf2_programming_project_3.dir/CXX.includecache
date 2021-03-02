@@ -9,17 +9,15 @@
 /Users/benworthington/Documents/UArk Spring 2021/Programming Foundations 2 (CSCE 2014)/Projects/pf2-programming-project-3/Dictionary.cpp
 Dictionary.h
 /Users/benworthington/Documents/UArk Spring 2021/Programming Foundations 2 (CSCE 2014)/Projects/pf2-programming-project-3/Dictionary.h
-iostream
--
-algorithm
--
 
 /Users/benworthington/Documents/UArk Spring 2021/Programming Foundations 2 (CSCE 2014)/Projects/pf2-programming-project-3/Dictionary.h
 iostream
 -
 fstream
 -
-string
+cctype
+-
+algorithm
 -
 
 /Users/benworthington/Documents/UArk Spring 2021/Programming Foundations 2 (CSCE 2014)/Projects/pf2-programming-project-3/main.cpp

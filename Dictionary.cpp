@@ -3,9 +3,6 @@
 //
 
 #include "Dictionary.h"
-#include <iostream>
-#include <algorithm>
-using namespace std;
 
 Dictionary::Dictionary() {
     // Initialize word array
@@ -33,7 +30,6 @@ void Dictionary::ReadFile(string &name_) {
     while (!din.eof() && count < NUM_OF_WORDS)
     {
         word[count++] = str;
-        ranking[count++] = num;
         din >> num >> str;
     }
     din.close();
@@ -52,15 +48,15 @@ void Dictionary::WriteFile(string &fileName_) {
 }
 
 void Dictionary::MakeLowercase(string &word_) {
-
+    transform(word_.begin(), word_.end(), word_.begin(), ::tolower);
 }
 
 bool Dictionary::IsCapital(char &singleChar_) {
 
 }
 
-bool Dictionary::IsTop1000Word(string &word) {
-    
+bool Dictionary::IsTop1000Word(string &word_) {
+
 }
 
 int Dictionary::BinarySearch(string &value_, int low_, int high_) {
@@ -90,8 +86,9 @@ void Dictionary::Test() {
 
     Dictionary test;
     string word;
+    string file = "top1000.txt";
 
-    test.ReadFile("top1000.txt");
+    test.ReadFile(file);
 
     cout << "Enter a word: > ";
     cin >> word;

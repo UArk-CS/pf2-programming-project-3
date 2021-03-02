@@ -7,11 +7,11 @@
 
 #include <iostream>
 #include <fstream>
-#include <string>
+#include <cctype>
+#include <algorithm>
 using namespace std;
 
 const int NUM_OF_WORDS = 1000;
-const int NUM_OF_RANKS = 1000;
 
 class Dictionary {
 public:
@@ -23,7 +23,7 @@ public:
     void MakeLowercase(string &word_);
 
     bool IsCapital(char &singleChar_);
-    bool IsTop1000Word(string &word);
+    bool IsTop1000Word(string &word_);
 
     int BinarySearch(string &value_, int low_, int high_);
     int Lookup(string value_);
@@ -33,7 +33,6 @@ public:
 private:
     int count;
     string word[NUM_OF_WORDS];
-    int ranking[NUM_OF_RANKS];
 };
 
 
