@@ -5,6 +5,8 @@ int main() {
 
     Dictionary::Test();
 
+    char test = ',';
+
     return 0;
 
 }

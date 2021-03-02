@@ -18,7 +18,7 @@ Dictionary::~Dictionary() {
 }
 
 
-void Dictionary::ReadFile(string name_) {
+void Dictionary::ReadFile(string &name_) {
     // Open input file
     ifstream din;
     din.open(name_.c_str());
@@ -33,9 +33,34 @@ void Dictionary::ReadFile(string name_) {
     while (!din.eof() && count < NUM_OF_WORDS)
     {
         word[count++] = str;
+        ranking[count++] = num;
         din >> num >> str;
     }
     din.close();
+}
+
+void Dictionary::WriteFile(string &fileName_) {
+
+    ofstream dout;
+    dout.open(fileName_);
+    if (dout.fail()) {
+        return;
+    }
+
+
+
+}
+
+void Dictionary::MakeLowercase(string &word_) {
+
+}
+
+bool Dictionary::IsCapital(char &singleChar_) {
+
+}
+
+bool Dictionary::IsTop1000Word(string &word) {
+    
 }
 
 int Dictionary::BinarySearch(string &value_, int low_, int high_) {
@@ -52,8 +77,6 @@ int Dictionary::BinarySearch(string &value_, int low_, int high_) {
     } else {
         return BinarySearch(value_, midpoint + 1, high_);
     }
-
-//    return midpoint;
 
 }
 
