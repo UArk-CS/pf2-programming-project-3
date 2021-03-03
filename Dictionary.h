@@ -19,11 +19,10 @@ public:
     ~Dictionary();
 
     void ReadFile(string &name_);
-    void WriteFile(string &fileName_);
+    void WriteFile(string &fileName_, string &value_);
     void MakeLowercase(string &word_);
 
     bool IsCapital(char &singleChar_);
-    bool IsTop1000Word(string &word_);
 
     int BinarySearch(string &value_, int low_, int high_);
     int Lookup(string value_);

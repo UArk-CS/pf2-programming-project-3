@@ -35,15 +35,18 @@ void Dictionary::ReadFile(string &name_) {
     din.close();
 }
 
-void Dictionary::WriteFile(string &fileName_) {
+void Dictionary::WriteFile(string &fileName_, string &value_) {
 
     ofstream dout;
-    dout.open(fileName_);
+    dout.open(fileName_, fstream::app);
     if (dout.fail()) {
         return;
     }
 
-
+    if (dout.is_open()) {
+        dout << value_;
+        dout.close();
+    }
 
 }
 
@@ -53,9 +56,11 @@ void Dictionary::MakeLowercase(string &word_) {
 
 bool Dictionary::IsCapital(char &singleChar_) {
 
-}
-
-bool Dictionary::IsTop1000Word(string &word_) {
+    if (isupper(singleChar_)) {
+        return true;
+    } else {
+        return false;
+    }
 
 }
 
