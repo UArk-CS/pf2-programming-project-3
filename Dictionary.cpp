@@ -35,10 +35,10 @@ void Dictionary::ReadFile(string &name_) {
     din.close();
 }
 
-void Dictionary::WriteFile(string &fileName_, string &value_) {
+void Dictionary::WriteFile(string &outputFileName_, string &value_) {
 
     ofstream dout;
-    dout.open(fileName_, fstream::app);
+    dout.open(outputFileName_, ofstream::app);
     if (dout.fail()) {
         return;
     }
@@ -54,12 +54,24 @@ void Dictionary::MakeLowercase(string &word_) {
     transform(word_.begin(), word_.end(), word_.begin(), ::tolower);
 }
 
-bool Dictionary::IsCapital(char &singleChar_) {
+bool Dictionary::IsCapital(string &word_) {
 
-    if (isupper(singleChar_)) {
+    if (isupper(word_[0])) {
         return true;
     } else {
         return false;
+    }
+
+}
+
+bool Dictionary::HasPunctuation(string &word_) {
+
+    char lastChar = word_[word_.length() - 1];
+
+    if (('A' <= lastChar && lastChar <= 'Z') || ('a' <= lastChar && lastChar <= 'z')) {
+        return false;
+    } else {
+        return true;
     }
 
 }
