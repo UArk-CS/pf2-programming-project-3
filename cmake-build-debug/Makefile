@@ -143,32 +143,32 @@ pf2_programming_project_3/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pf2_programming_project_3.dir/build.make CMakeFiles/pf2_programming_project_3.dir/build
 .PHONY : pf2_programming_project_3/fast
 
-Dictionary.o: Dictionary.cpp.o
+AbridgeBook.o: AbridgeBook.cpp.o
 
-.PHONY : Dictionary.o
+.PHONY : AbridgeBook.o
 
 # target to build an object file
-Dictionary.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pf2_programming_project_3.dir/build.make CMakeFiles/pf2_programming_project_3.dir/Dictionary.cpp.o
-.PHONY : Dictionary.cpp.o
+AbridgeBook.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pf2_programming_project_3.dir/build.make CMakeFiles/pf2_programming_project_3.dir/AbridgeBook.cpp.o
+.PHONY : AbridgeBook.cpp.o
 
-Dictionary.i: Dictionary.cpp.i
+AbridgeBook.i: AbridgeBook.cpp.i
 
-.PHONY : Dictionary.i
+.PHONY : AbridgeBook.i
 
 # target to preprocess a source file
-Dictionary.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pf2_programming_project_3.dir/build.make CMakeFiles/pf2_programming_project_3.dir/Dictionary.cpp.i
-.PHONY : Dictionary.cpp.i
+AbridgeBook.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pf2_programming_project_3.dir/build.make CMakeFiles/pf2_programming_project_3.dir/AbridgeBook.cpp.i
+.PHONY : AbridgeBook.cpp.i
 
-Dictionary.s: Dictionary.cpp.s
+AbridgeBook.s: AbridgeBook.cpp.s
 
-.PHONY : Dictionary.s
+.PHONY : AbridgeBook.s
 
 # target to generate assembly for a file
-Dictionary.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pf2_programming_project_3.dir/build.make CMakeFiles/pf2_programming_project_3.dir/Dictionary.cpp.s
-.PHONY : Dictionary.cpp.s
+AbridgeBook.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pf2_programming_project_3.dir/build.make CMakeFiles/pf2_programming_project_3.dir/AbridgeBook.cpp.s
+.PHONY : AbridgeBook.cpp.s
 
 main.o: main.cpp.o
 
@@ -206,9 +206,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... pf2_programming_project_3"
-	@echo "... Dictionary.o"
-	@echo "... Dictionary.i"
-	@echo "... Dictionary.s"
+	@echo "... AbridgeBook.o"
+	@echo "... AbridgeBook.i"
+	@echo "... AbridgeBook.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

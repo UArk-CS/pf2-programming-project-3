@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/pf2_programming_project_3.dir/Dictionary.cpp.o"
+  "CMakeFiles/pf2_programming_project_3.dir/AbridgeBook.cpp.o"
   "CMakeFiles/pf2_programming_project_3.dir/main.cpp.o"
   "pf2_programming_project_3"
   "pf2_programming_project_3.pdb"

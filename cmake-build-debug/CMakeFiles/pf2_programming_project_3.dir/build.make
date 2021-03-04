@@ -90,29 +90,29 @@ CMakeFiles/pf2_programming_project_3.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pf2_programming_project_3.dir/main.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/benworthington/Documents/UArk Spring 2021/Programming Foundations 2 (CSCE 2014)/Projects/pf2-programming-project-3/main.cpp" -o CMakeFiles/pf2_programming_project_3.dir/main.cpp.s
 
-CMakeFiles/pf2_programming_project_3.dir/Dictionary.cpp.o: CMakeFiles/pf2_programming_project_3.dir/flags.make
-CMakeFiles/pf2_programming_project_3.dir/Dictionary.cpp.o: ../Dictionary.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/benworthington/Documents/UArk Spring 2021/Programming Foundations 2 (CSCE 2014)/Projects/pf2-programming-project-3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pf2_programming_project_3.dir/Dictionary.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pf2_programming_project_3.dir/Dictionary.cpp.o -c "/Users/benworthington/Documents/UArk Spring 2021/Programming Foundations 2 (CSCE 2014)/Projects/pf2-programming-project-3/Dictionary.cpp"
+CMakeFiles/pf2_programming_project_3.dir/AbridgeBook.cpp.o: CMakeFiles/pf2_programming_project_3.dir/flags.make
+CMakeFiles/pf2_programming_project_3.dir/AbridgeBook.cpp.o: ../AbridgeBook.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/benworthington/Documents/UArk Spring 2021/Programming Foundations 2 (CSCE 2014)/Projects/pf2-programming-project-3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pf2_programming_project_3.dir/AbridgeBook.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pf2_programming_project_3.dir/AbridgeBook.cpp.o -c "/Users/benworthington/Documents/UArk Spring 2021/Programming Foundations 2 (CSCE 2014)/Projects/pf2-programming-project-3/AbridgeBook.cpp"
 
-CMakeFiles/pf2_programming_project_3.dir/Dictionary.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pf2_programming_project_3.dir/Dictionary.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/benworthington/Documents/UArk Spring 2021/Programming Foundations 2 (CSCE 2014)/Projects/pf2-programming-project-3/Dictionary.cpp" > CMakeFiles/pf2_programming_project_3.dir/Dictionary.cpp.i
+CMakeFiles/pf2_programming_project_3.dir/AbridgeBook.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pf2_programming_project_3.dir/AbridgeBook.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/benworthington/Documents/UArk Spring 2021/Programming Foundations 2 (CSCE 2014)/Projects/pf2-programming-project-3/AbridgeBook.cpp" > CMakeFiles/pf2_programming_project_3.dir/AbridgeBook.cpp.i
 
-CMakeFiles/pf2_programming_project_3.dir/Dictionary.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pf2_programming_project_3.dir/Dictionary.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/benworthington/Documents/UArk Spring 2021/Programming Foundations 2 (CSCE 2014)/Projects/pf2-programming-project-3/Dictionary.cpp" -o CMakeFiles/pf2_programming_project_3.dir/Dictionary.cpp.s
+CMakeFiles/pf2_programming_project_3.dir/AbridgeBook.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pf2_programming_project_3.dir/AbridgeBook.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/benworthington/Documents/UArk Spring 2021/Programming Foundations 2 (CSCE 2014)/Projects/pf2-programming-project-3/AbridgeBook.cpp" -o CMakeFiles/pf2_programming_project_3.dir/AbridgeBook.cpp.s
 
 # Object files for target pf2_programming_project_3
 pf2_programming_project_3_OBJECTS = \
 "CMakeFiles/pf2_programming_project_3.dir/main.cpp.o" \
-"CMakeFiles/pf2_programming_project_3.dir/Dictionary.cpp.o"
+"CMakeFiles/pf2_programming_project_3.dir/AbridgeBook.cpp.o"
 
 # External object files for target pf2_programming_project_3
 pf2_programming_project_3_EXTERNAL_OBJECTS =
 
 pf2_programming_project_3: CMakeFiles/pf2_programming_project_3.dir/main.cpp.o
-pf2_programming_project_3: CMakeFiles/pf2_programming_project_3.dir/Dictionary.cpp.o
+pf2_programming_project_3: CMakeFiles/pf2_programming_project_3.dir/AbridgeBook.cpp.o
 pf2_programming_project_3: CMakeFiles/pf2_programming_project_3.dir/build.make
 pf2_programming_project_3: CMakeFiles/pf2_programming_project_3.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/benworthington/Documents/UArk Spring 2021/Programming Foundations 2 (CSCE 2014)/Projects/pf2-programming-project-3/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable pf2_programming_project_3"

@@ -13,10 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9aa4e62f-12cc-43b8-93a4-faa6018b9a14" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dictionary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Dictionary.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dictionary.h" beforeDir="false" afterPath="$PROJECT_DIR$/Dictionary.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/pf2_programming_project_3" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/pf2_programming_project_3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +75,7 @@
       <workItem from="1614013674675" duration="10520000" />
       <workItem from="1614288689098" duration="4000" />
       <workItem from="1614547019726" duration="1573000" />
-      <workItem from="1614655974419" duration="23172000" />
+      <workItem from="1614655974419" duration="23821000" />
     </task>
     <servers />
   </component>
@@ -89,7 +86,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Dictionary.cpp</url>
+          <url>file://$PROJECT_DIR$/AbridgeBook.cpp</url>
           <line>191</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
