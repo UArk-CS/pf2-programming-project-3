@@ -1,0 +1,28 @@
+Script started on 2021-03-04 17:14:21-0600
+]0;baworthi@turing: ~/pf2-2021/pf2-programming-project-3baworthi@turing:~/pf2-2021/pf2-programming-project-3$ g++ 0W[K[K-Wall *.cpp -o project3
+]0;baworthi@turing: ~/pf2-2021/pf2-programming-project-3baworthi@turing:~/pf2-2021/pf2-programming-project-3$ ./project3
+Welcome to Book Abridger! 
+
+Enter the name of the dictionary: > top1--  000.txt
+
+Enter the book to abridge: > book1.txt
+
+Enter the name of the output file: > newBook1.txt
+
+Creating abridged book...
+Done! newBook1.txt has been created!
+]0;baworthi@turing: ~/pf2-2021/pf2-programming-project-3baworthi@turing:~/pf2-2021/pf2-programming-project-3$ ./project3
+Welcome to Book Abridger! 
+
+Enter the name of the dictionary: > top1000.txt
+
+Enter the book to abridge: > book2.txt
+
+Enter the name of the output file: > newb Book2.txt
+
+Creating abridged book...
+Done! newBook2.txt has been created!
+]0;baworthi@turing: ~/pf2-2021/pf2-programming-project-3baworthi@turing:~/pf2-2021/pf2-programming-project-3$ exit
+exit
+
+Script done on 2021-03-04 17:15:37-0600
