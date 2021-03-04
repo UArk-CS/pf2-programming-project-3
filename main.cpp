@@ -1,9 +1,9 @@
 #include <iostream>
-#include "Dictionary.h"
+#include "AbridgeBook.h"
 
 int main() {
 
-    Dictionary::Test();
+    AbridgeBook::Test();
 
     char test = ',';
 

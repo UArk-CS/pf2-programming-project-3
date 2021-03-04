@@ -2,20 +2,20 @@
 // Created by Ben Worthington on 2/22/21.
 //
 
-#include "Dictionary.h"
+#include "AbridgeBook.h"
 
-Dictionary::Dictionary() {
+AbridgeBook::AbridgeBook() {
     // Initialize word array
     count = 0;
     for (int i = 0; i < NUM_OF_WORDS; i++)
         word[i] = "";
 }
 
-Dictionary::~Dictionary() {
+AbridgeBook::~AbridgeBook() {
 }
 
 
-void Dictionary::ReadFile(string &name_) {
+void AbridgeBook::ReadFile(string &name_) {
     // Open input file
     ifstream din;
     din.open(name_.c_str());
@@ -35,7 +35,7 @@ void Dictionary::ReadFile(string &name_) {
     din.close();
 }
 
-void Dictionary::WriteFile(string &outputFileName_, string &value_) {
+void AbridgeBook::WriteFile(string &outputFileName_, string &value_, int &numOfWords_) {
 
     ofstream dout;
     dout.open(outputFileName_, ofstream::app);
@@ -44,16 +44,23 @@ void Dictionary::WriteFile(string &outputFileName_, string &value_) {
     }
 
     if (dout.is_open()) {
-        dout << value_;
+        dout << value_ << " ";
+
+        if (numOfWords_ == 10) {
+            dout << "\n";
+            numOfWords_ = 0;
+        }
+
         dout.close();
     }
 
 }
 
-void Dictionary::CreateAbriged(string &bookName_, string &abridgedBookName_) {
+void AbridgeBook::CreateAbriged(string &bookName_, string &abridgedBookName_) {
 
     string printStr;
     string lookupStr;
+    int numOfWords = 0;
 
     ifstream din;
     din.open(bookName_);
@@ -64,8 +71,25 @@ void Dictionary::CreateAbriged(string &bookName_, string &abridgedBookName_) {
     if (din.is_open()) {
 
         din >> printStr;
+        lookupStr = printStr;
         while (!din.eof()) {
 
+            //remove punc
+            RemovePunctuation(lookupStr, printStr);
+
+            //check if capital
+            //if it is, make lookupStr lowercase
+            if (IsCapital(lookupStr)) {
+                WriteFile(abridgedBookName_, printStr, numOfWords);
+                numOfWords++;
+            } else if (Lookup(lookupStr) != -1) {
+                WriteFile(abridgedBookName_, printStr, numOfWords);
+                numOfWords++;
+            }
+
+            //get next word
+            din >> printStr;
+            lookupStr = printStr;
 
         }
 
@@ -75,13 +99,13 @@ void Dictionary::CreateAbriged(string &bookName_, string &abridgedBookName_) {
 
 }
 
-void Dictionary::MakeLowercase(string &word_) {
-    transform(word_.begin(), word_.end(), word_.begin(), ::tolower);
+void AbridgeBook::MakeLowercase(string &lookupStr_) {
+    transform(lookupStr_.begin(), lookupStr_.end(), lookupStr_.begin(), ::tolower);
 }
 
-bool Dictionary::IsCapital(string &word_) {
+bool AbridgeBook::IsCapital(string &lookupStr_) {
 
-    if (isupper(word_[0])) {
+    if (isupper(lookupStr_[0])) {
         return true;
     } else {
         return false;
@@ -89,7 +113,7 @@ bool Dictionary::IsCapital(string &word_) {
 
 }
 
-void Dictionary::RemovePunctuation(string &lookupStr_, string &printStr_) {
+void AbridgeBook::RemovePunctuation(string &lookupStr_, string &printStr_) {
 
     int strLength = lookupStr_.length();
     char lastChar = lookupStr_[strLength - 1];
@@ -119,7 +143,7 @@ void Dictionary::RemovePunctuation(string &lookupStr_, string &printStr_) {
 
 }
 
-int Dictionary::BinarySearch(string &value_, int low_, int high_) {
+int AbridgeBook::BinarySearch(string &value_, int low_, int high_) {
 
     // Calculate midpoint index
     int midpoint = (low_ + high_) / 2;
@@ -136,31 +160,8 @@ int Dictionary::BinarySearch(string &value_, int low_, int high_) {
 
 }
 
-int Dictionary::Lookup(string value_) {
+int AbridgeBook::Lookup(string value_) {
 
     return BinarySearch(value_, 0, count - 1);
-
-}
-
-void Dictionary::Test() {
-
-    Dictionary test;
-    string word;
-    string file = "top1000.txt";
-
-    test.ReadFile(file);
-
-//    cout << "Enter a word: > ";
-//    cin >> word;
-//    transform(word.begin(), word.end(), word.begin(), ::tolower);
-
-//    cout << "Location in Dictionary: " << test.Lookup(word) << endl;
-
-    string lookup = "hello.";
-    string print = "hello.";
-
-    test.RemovePunctuation(lookup, print);
-    cout << "Lookup " << lookup << endl;
-    cout << "Print " << print << endl;
 
 }
