@@ -12,7 +12,8 @@
 using namespace std;
 
 const int NUM_OF_WORDS = 1000;
-const char COMMON_PUNCTUATION[5] = {'.', ',', ';', '?', '!'};
+const int NUM_OF_PUNCTUATION = 5;
+const char COMMON_PUNCTUATION[NUM_OF_PUNCTUATION] = {'.', ',', ';', '?', '!'};
 
 class Dictionary {
 public:
@@ -21,10 +22,10 @@ public:
 
     void ReadFile(string &name_);
     void WriteFile(string &outputFileName_, string &value_);
-    void CreateAbriged();
+    void CreateAbriged(string &bookName_, string &abridgedBookName_);
     void MakeLowercase(string &word_);
     bool IsCapital(string &word_);
-    bool HasPunctuation(string &word_);
+    void RemovePunctuation(string &lookupStr_, string &printStr_);
     int BinarySearch(string &value_, int low_, int high_);
     int Lookup(string value_);
 

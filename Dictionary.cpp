@@ -50,6 +50,31 @@ void Dictionary::WriteFile(string &outputFileName_, string &value_) {
 
 }
 
+void Dictionary::CreateAbriged(string &bookName_, string &abridgedBookName_) {
+
+    string printStr;
+    string lookupStr;
+
+    ifstream din;
+    din.open(bookName_);
+    if (din.fail()) {
+        return;
+    }
+
+    if (din.is_open()) {
+
+        din >> printStr;
+        while (!din.eof()) {
+
+
+        }
+
+        din.close();
+
+    }
+
+}
+
 void Dictionary::MakeLowercase(string &word_) {
     transform(word_.begin(), word_.end(), word_.begin(), ::tolower);
 }
@@ -64,14 +89,32 @@ bool Dictionary::IsCapital(string &word_) {
 
 }
 
-bool Dictionary::HasPunctuation(string &word_) {
+void Dictionary::RemovePunctuation(string &lookupStr_, string &printStr_) {
 
-    char lastChar = word_[word_.length() - 1];
+    int strLength = lookupStr_.length();
+    char lastChar = lookupStr_[strLength - 1];
+    bool isCommonPunc = false;
 
     if (('A' <= lastChar && lastChar <= 'Z') || ('a' <= lastChar && lastChar <= 'z')) {
-        return false;
+        return;
     } else {
-        return true;
+
+        for (int i = 0; i < NUM_OF_PUNCTUATION; i++) {
+
+            if (lastChar == COMMON_PUNCTUATION[i]) {
+                isCommonPunc = true;
+            }
+
+        }
+
+        if (isCommonPunc) {
+            // delete punc from lookupStr_
+            lookupStr_.erase(strLength - 1);
+        } else {
+            lookupStr_.erase(strLength - 1);
+            printStr_.erase(strLength - 1);
+        }
+
     }
 
 }
@@ -107,10 +150,17 @@ void Dictionary::Test() {
 
     test.ReadFile(file);
 
-    cout << "Enter a word: > ";
-    cin >> word;
-    transform(word.begin(), word.end(), word.begin(), ::tolower);
+//    cout << "Enter a word: > ";
+//    cin >> word;
+//    transform(word.begin(), word.end(), word.begin(), ::tolower);
 
-    cout << "Location in Dictionary: " << test.Lookup(word) << endl;
+//    cout << "Location in Dictionary: " << test.Lookup(word) << endl;
+
+    string lookup = "hello.";
+    string print = "hello.";
+
+    test.RemovePunctuation(lookup, print);
+    cout << "Lookup " << lookup << endl;
+    cout << "Print " << print << endl;
 
 }
